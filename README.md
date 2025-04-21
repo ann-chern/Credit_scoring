@@ -1,2 +1,2 @@
 # Credit_scoring
-Credit scoring competition
+Credit scoring competition spring 2024
