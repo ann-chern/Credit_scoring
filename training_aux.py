@@ -38,7 +38,7 @@ class EarlyStopping:
         self.counter = 0
         self.best_score = None
         self.early_stop = False
-        self.best_prev_score = np.Inf if mode == "min" else -np.Inf
+        self.best_prev_score = np.inf if mode == "min" else -np.inf
         self.delta = delta
         self.save_path = save_path
         self.metric_name = "metric" if not metric_name else metric_name
@@ -63,7 +63,7 @@ class EarlyStopping:
             self.save_checkpoint(metric_value, model)
             self.counter = 0
 
-    def save_checkpoint(self, metric_value: float, model: torch.nn.Module or tensorflow.keras.Model):
+    def save_checkpoint(self, metric_value: float, model: torch.nn.Module):
         """
         Cохраняет модель, если валидационная метрика улучшилась.
 
